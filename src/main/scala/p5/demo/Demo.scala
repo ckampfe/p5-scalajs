@@ -1,10 +1,12 @@
-package p5_scalajs.demo
+package p5.demo
 
-import p5_scalajs.p5._
+import p5.facade.p5Global._
 
 import scala.scalajs.js.JSApp
 
-object Demo extends JSApp {
+object Demo extends JSApp  {
+
+
   def main(): Unit = {
 
     // create a 400x400 black canvas
