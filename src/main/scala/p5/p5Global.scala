@@ -1,4 +1,4 @@
-package p5.facade
+package p5
 
 import scala.scalajs.js
 import scala.scalajs.js.|
@@ -36,9 +36,9 @@ object p5Global extends js.Any {
 
   var windowHeight: js.Any = js.native
 
-  var width: js.Any = js.native
+  var width: Double = js.native
 
-  var height: js.Any = js.native
+  var height: Double = js.native
 
   var deviceOrientation: js.Any = js.native
 
@@ -136,7 +136,7 @@ object p5Global extends js.Any {
            ): p5Object = js.native
 
   def ambientLight(
-                    v1: Double | js.Array[js.Any] | String | lib.Color,
+                    v1: Double | js.Array[js.Any] | String | Color,
                     v2: Double = 1.0,
                     v3: Double = 1.0,
                     a: Double = 1.0
@@ -147,21 +147,21 @@ object p5Global extends js.Any {
   def texture(): p5Object = js.native
 
   def basicMaterial(
-                     v1: Double | js.Array[js.Any] | String | lib.Color,
+                     v1: Double | js.Array[js.Any] | String | Color,
                      v2: Double = 1.0,
                      v3: Double = 1.0,
                      a: Double = 1.0
                    ): p5Object = js.native
 
   def ambientMaterial(
-                       v1: Double | js.Array[js.Any] | String | lib.Color,
+                       v1: Double | js.Array[js.Any] | String | Color,
                        v2: Double = 1.0,
                        v3: Double = 1.0,
                        a: Double = 1.0
                      ): p5Object = js.native
 
   def specularMaterial(
-                        v1: Double | js.Array[js.Any] | String | lib.Color,
+                        v1: Double | js.Array[js.Any] | String | Color,
                         v2: Double = 1.0,
                         v3: Double = 1.0,
                         a: Double = 1.0
@@ -191,7 +191,7 @@ object p5Global extends js.Any {
   def saturation(color: js.Any): Unit = js.native
 
   def background(
-                  v1: Double | String | lib.Color | lib.Image,
+                  v1: Double | String | Color | Image,
                   v2: Double = 1.0,
                   v3: Double = 1.0,
                   a: Double = 1.0
@@ -200,7 +200,7 @@ object p5Global extends js.Any {
   def clear(): Unit = js.native
 
   def fill(
-            v1: Double | js.Array[js.Any] | String | lib.Color,
+            v1: Double | js.Array[js.Any] | String | Color,
             v2: Double = 1.0,
             v3: Double = 1.0,
             a: Double = 1.0
@@ -211,7 +211,7 @@ object p5Global extends js.Any {
   def noStroke(): Unit = js.native
 
   def stroke(
-              v1: Double | js.Array[js.Any] | String | lib.Color,
+              v1: Double | js.Array[js.Any] | String | Color,
               v2: Double = 1.0,
               v3: Double = 1.0,
               a: Double = 1.0
@@ -447,7 +447,7 @@ object p5Global extends js.Any {
 
   def touchEnded(): Unit = js.native
 
-  def createImage(width: Double, height: Double): lib.Image = js.native
+  def createImage(width: Double, height: Double): Image = js.native
 
   def saveFrames(
                   filename: String,
@@ -458,7 +458,7 @@ object p5Global extends js.Any {
                 ): Unit = js.native
 
   def image(
-             img: lib.Image,
+             img: Image,
              sx: Double = 0.0,
              sy: Double = 0.0,
              sWidth: Double = 1.0,
@@ -487,7 +487,7 @@ object p5Global extends js.Any {
            y: Double = 0.0,
            w: Double = 1.0,
            h: Double = 1.0
-         ): js.Array[js.Any] | lib.Image = js.native
+         ): js.Array[js.Any] | Image = js.native
 
   def loadPixels(): Unit = js.native
 
@@ -551,7 +551,7 @@ object p5Global extends js.Any {
   def saveStrings(list: js.Array[js.Any], filename: String): Unit = js.native
 
   def saveTable(
-                 table: lib.Table,
+                 table: Table,
                  filename: String,
                  options: String = ""
                ): Unit = js.native
@@ -604,7 +604,7 @@ object p5Global extends js.Any {
 
   def randomSeed(seed: Double): Unit = js.native
 
-  def random(min: Double, max: Double): Double = js.native
+  def random(min: Double, max: Double=Double.MaxValue): Double = js.native
 
   def randomGaussian(mean: Double, sd: Double): Double = js.native
 

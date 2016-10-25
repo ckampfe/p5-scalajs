@@ -1,6 +1,6 @@
 package p5.typesafe
 
-import p5.facade.p5Global
+import p5.p5Global
 
 import scala.scalajs.js.JSApp
 
@@ -9,25 +9,40 @@ import scala.scalajs.js.JSApp
   */
 
 
-trait P5App extends JSApp {
+trait State
+
+
+trait P5App[E] extends JSApp {
+
+
+  private var local_state: E = initState
+
 
   def main(): Unit = {
 
     p5Global.setup = () => {
-      setup
+      setup(local_state)
       ()
     }
     p5Global.draw = () => {
-      draw
+      draw(local_state)
       ()
     }
 
-
   }
 
-  def setup: Any
 
-  def draw: Any
+  def initState: E
 
+  def setup(state: E): Any
+
+  def draw(state: E): Any
+
+  def updateState(s: E): E = {
+    local_state = s
+    s
+  }
+
+  def state = local_state
 
 }

@@ -1,6 +1,6 @@
-package p5.demo
+package demo
 
-import p5.facade.p5Global._
+import p5.p5Global._
 
 import scala.scalajs.js.JSApp
 

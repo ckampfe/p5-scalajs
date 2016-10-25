@@ -1,4 +1,4 @@
-package p5.facade.lib
+package p5
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSName
@@ -230,7 +230,7 @@ class FFT protected () extends js.Object {
   def this(smoothing: Double = 1.0, bins: Double = 1.0) = this()
   def setInput(source: js.Any = ""): Unit = js.native
   def waveform(bins: Double = 1.0, precision: String = ""): js.Array[js.Any] = js.native
-  def analyze(bins: Double = 1.0, scale: Double = 1.0): js.Array[js.Any] = js.native
+  def analyze(bins: Double = 1.0, scale: Double = 1.0): js.Array[Double] = js.native
   def getEnergy(frequency1: Double | String, frequency2: Double = 1.0): Double = js.native
   def getCentroid(): Double = js.native
   def smooth(smoothing: Double): Unit = js.native
@@ -303,7 +303,7 @@ class Noise protected () extends js.Object {
 @JSName("p5.AudioIn")
 class AudioIn extends js.Object {
   var enabled: js.Any = js.native
-  def start(successCallback: js.Function0[Any], errorCallback: js.Function0[Any]): Unit = js.native
+  def start(successCallback: js.Function0[Any]=()=>(), errorCallback: js.Function0[Any]=() =>()): Unit = js.native
   def stop(): Unit = js.native
   def connect(unit: js.Any = ""): Unit = js.native
   def disconnect(): Unit = js.native
