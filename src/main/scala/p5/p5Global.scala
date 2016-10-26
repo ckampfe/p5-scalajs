@@ -6,7 +6,6 @@ import scala.scalajs.js.|
 @js.native
 class p5Object extends js.Object
 
-
 @js.native
 @js.annotation.JSGlobalScope
 object p5Global extends js.Any {
@@ -107,65 +106,71 @@ object p5Global extends js.Any {
   def sphere(radius: Double, detail: Double = 1.0): Unit = js.native
 
   def ellipsoid(
-                 radiusx: Double,
-                 radiusy: Double,
-                 radiusz: Double,
-                 detail: Double = 1.0
-               ): p5Object = js.native
+      radiusx: Double,
+      radiusy: Double,
+      radiusz: Double,
+      detail: Double = 1.0
+  ): p5Object = js.native
 
-  def cylinder(radius: Double, height: Double, detail: Double = 1.0): p5Object = js.native
+  def cylinder(radius: Double,
+               height: Double,
+               detail: Double = 1.0): p5Object = js.native
 
-  def cone(radius: Double, height: Double, detail: Double = 1.0): Unit = js.native
+  def cone(radius: Double, height: Double, detail: Double = 1.0): Unit =
+    js.native
 
-  def torus(radius: Double, tubeRadius: Double, detail: Double = 1.0): Unit = js
-    .native
+  def torus(radius: Double, tubeRadius: Double, detail: Double = 1.0): Unit =
+    js.native
 
   def box(width: Double, height: Double, depth: Double): p5Object = js.native
 
   def camera(x: Double, y: Double, z: Double): p5Object = js.native
 
-  def perspective(fovy: Double, aspect: Double, near: Double, far: Double): p5Object = js.native
+  def perspective(fovy: Double,
+                  aspect: Double,
+                  near: Double,
+                  far: Double): p5Object = js.native
 
   def ortho(
-             left: Double,
-             right: Double,
-             bottom: Double,
-             top: Double,
-             near: Double,
-             far: Double
-           ): p5Object = js.native
+      left: Double,
+      right: Double,
+      bottom: Double,
+      top: Double,
+      near: Double,
+      far: Double
+  ): p5Object = js.native
 
   def ambientLight(
-                    v1: Double | js.Array[js.Any] | String | Color,
-                    v2: Double = 1.0,
-                    v3: Double = 1.0,
-                    a: Double = 1.0
-                  ): p5Object = js.native
+      v1: Double | js.Array[js.Any] | String | Color,
+      v2: Double = 1.0,
+      v3: Double = 1.0,
+      a: Double = 1.0
+  ): p5Object = js.native
 
   def normalMaterial(): p5Object = js.native
 
   def texture(): p5Object = js.native
 
   def basicMaterial(
-                     v1: Double | js.Array[js.Any] | String | Color,
-                     v2: Double = 1.0,
-                     v3: Double = 1.0,
-                     a: Double = 1.0
-                   ): p5Object = js.native
+      v1: Double | js.Array[js.Any] | String | Color,
+      v2: Double = 1.0,
+      v3: Double = 1.0,
+      a: Double = 1.0
+  ): p5Object = js.native
 
   def ambientMaterial(
-                       v1: Double | js.Array[js.Any] | String | Color,
-                       v2: Double = 1.0,
-                       v3: Double = 1.0,
-                       a: Double = 1.0
-                     ): p5Object = js.native
+      v1: Double | js.Array[js.Any] | String | Color,
+      v2: Double = 1.0,
+      v3: Double = 1.0,
+      a: Double = 1.0
+  ): p5Object = js.native
 
   def specularMaterial(
-                        v1: Double | js.Array[js.Any] | String | Color,
-                        v2: Double = 1.0,
-                        v3: Double = 1.0,
-                        a: Double = 1.0
-                      ): p5Object = js.native
+      v1: Double | js.Array[js.Any] | String | Color,
+      v2: Double = 1.0,
+      v3: Double = 1.0,
+      a: Double = 1.0
+  ): p5Object = js.native
 
   def alpha(obj: js.Any): Unit = js.native
 
@@ -174,11 +179,11 @@ object p5Global extends js.Any {
   def brightness(color: js.Any): Unit = js.native
 
   def color(
-             v1: Double | String,
-             v2: Double = 1.0,
-             v3: Double = 1.0,
-             alpha: Double = 1.0
-           ): js.Array[js.Any] = js.native
+      v1: Double | String,
+      v2: Double = 1.0,
+      v3: Double = 1.0,
+      alpha: Double = 1.0
+  ): js.Array[js.Any] = js.native
 
   def green(color: js.Any): Unit = js.native
 
@@ -191,78 +196,79 @@ object p5Global extends js.Any {
   def saturation(color: js.Any): Unit = js.native
 
   def background(
-                  v1: Double | String | Color | Image,
-                  v2: Double = 1.0,
-                  v3: Double = 1.0,
-                  a: Double = 1.0
-                ): Unit = js.native
+      v1: Double | String | Color | Image,
+      v2: Double = 1.0,
+      v3: Double = 1.0,
+      a: Double = 1.0
+  ): Unit = js.native
 
   def clear(): Unit = js.native
 
   def fill(
-            v1: Double | js.Array[js.Any] | String | Color,
-            v2: Double = 1.0,
-            v3: Double = 1.0,
-            a: Double = 1.0
-          ): Unit = js.native
+      v1: Double | js.Array[js.Any] | String | Color,
+      v2: Double = 1.0,
+      v3: Double = 1.0,
+      a: Double = 1.0
+  ): Unit = js.native
 
   def noFill(): Unit = js.native
 
   def noStroke(): Unit = js.native
 
   def stroke(
-              v1: Double | js.Array[js.Any] | String | Color,
-              v2: Double = 1.0,
-              v3: Double = 1.0,
-              a: Double = 1.0
-            ): Unit = js.native
+      v1: Double | js.Array[js.Any] | String | Color,
+      v2: Double = 1.0,
+      v3: Double = 1.0,
+      a: Double = 1.0
+  ): Unit = js.native
 
   def arc(
-           a: Double,
-           b: Double,
-           c: Double,
-           d: Double,
-           start: Double,
-           stop: Double,
-           mode: String = ""
-         ): js.Dynamic = js.native
+      a: Double,
+      b: Double,
+      c: Double,
+      d: Double,
+      start: Double,
+      stop: Double,
+      mode: String = ""
+  ): js.Dynamic = js.native
 
   def ellipse(a: Double, b: Double, c: Double, d: Double): p5Object = js.native
 
-  def line(x1: Double, y1: Double, x2: Double, y2: Double): p5Object = js.native
+  def line(x1: Double, y1: Double, x2: Double, y2: Double): p5Object =
+    js.native
 
   def point(x: Double, y: Double): p5Object = js.native
 
   def quad(
-            x1: Double,
-            y1: Double,
-            x2: Double,
-            y2: Double,
-            x3: Double,
-            y3: Double,
-            x4: Double,
-            y4: Double
-          ): p5Object = js.native
+      x1: Double,
+      y1: Double,
+      x2: Double,
+      y2: Double,
+      x3: Double,
+      y3: Double,
+      x4: Double,
+      y4: Double
+  ): p5Object = js.native
 
   def rect(
-            x: Double,
-            y: Double,
-            w: Double,
-            h: Double,
-            tl: Double = 1.0,
-            tr: Double = 1.0,
-            br: Double = 1.0,
-            bl: Double = 1.0
-          ): p5Object = js.native
+      x: Double,
+      y: Double,
+      w: Double,
+      h: Double,
+      tl: Double = 1.0,
+      tr: Double = 1.0,
+      br: Double = 1.0,
+      bl: Double = 1.0
+  ): p5Object = js.native
 
   def triangle(
-                x1: Double,
-                y1: Double,
-                x2: Double,
-                y2: Double,
-                x3: Double,
-                y3: Double
-              ): p5Object = js.native
+      x1: Double,
+      y1: Double,
+      x2: Double,
+      y2: Double,
+      x3: Double,
+      y3: Double
+  ): p5Object = js.native
 
   def noSmooth(): p5Object = js.native
 
@@ -275,60 +281,60 @@ object p5Global extends js.Any {
   def remove(): Unit = js.native
 
   def bezier(
-              x1: Double,
-              y1: Double,
-              x2: Double,
-              y2: Double,
-              x3: Double,
-              y3: Double,
-              x4: Double,
-              y4: Double
-            ): js.Dynamic = js.native
+      x1: Double,
+      y1: Double,
+      x2: Double,
+      y2: Double,
+      x3: Double,
+      y3: Double,
+      x4: Double,
+      y4: Double
+  ): js.Dynamic = js.native
 
   def bezierPoint(
-                   a: Double,
-                   b: Double,
-                   c: Double,
-                   d: Double,
-                   t: Double
-                 ): Double = js.native
+      a: Double,
+      b: Double,
+      c: Double,
+      d: Double,
+      t: Double
+  ): Double = js.native
 
   def bezierTangent(
-                     a: Double,
-                     b: Double,
-                     c: Double,
-                     d: Double,
-                     t: Double
-                   ): Double = js.native
+      a: Double,
+      b: Double,
+      c: Double,
+      d: Double,
+      t: Double
+  ): Double = js.native
 
   def curve(
-             x1: Double,
-             y1: Double,
-             x2: Double,
-             y2: Double,
-             x3: Double,
-             y3: Double,
-             x4: Double,
-             y4: Double
-           ): js.Dynamic = js.native
+      x1: Double,
+      y1: Double,
+      x2: Double,
+      y2: Double,
+      x3: Double,
+      y3: Double,
+      x4: Double,
+      y4: Double
+  ): js.Dynamic = js.native
 
   def curveTightness(amount: Double): js.Dynamic = js.native
 
   def curvePoint(
-                  a: Double,
-                  b: Double,
-                  c: Double,
-                  d: Double,
-                  t: Double
-                ): Double = js.native
+      a: Double,
+      b: Double,
+      c: Double,
+      d: Double,
+      t: Double
+  ): Double = js.native
 
   def curveTangent(
-                    a: Double,
-                    b: Double,
-                    c: Double,
-                    d: Double,
-                    t: Double
-                  ): Double = js.native
+      a: Double,
+      b: Double,
+      c: Double,
+      d: Double,
+      t: Double
+  ): Double = js.native
 
   def print(contents: js.Any): Unit = js.native
 
@@ -350,13 +356,15 @@ object p5Global extends js.Any {
 
   def getURLParams(): js.Dynamic = js.native
 
-  def createCanvas(w: Double, h: Double, renderer: String = ""): js.Dynamic = js.native
+  def createCanvas(w: Double, h: Double, renderer: String = ""): js.Dynamic =
+    js.native
 
   def resizeCanvas(): Unit = js.native
 
   def noCanvas(): Unit = js.native
 
-  def createGraphics(w: Double, h: Double, renderer: String): js.Dynamic = js.native
+  def createGraphics(w: Double, h: Double, renderer: String): js.Dynamic =
+    js.native
 
   def noLoop(): Unit = js.native
 
@@ -369,13 +377,13 @@ object p5Global extends js.Any {
   def redraw(): Unit = js.native
 
   def applyMatrix(
-                   n00: Double,
-                   n01: Double,
-                   n02: Double,
-                   n10: Double,
-                   n11: Double,
-                   n12: Double
-                 ): p5Object = js.native
+      n00: Double,
+      n01: Double,
+      n02: Double,
+      n10: Double,
+      n11: Double,
+      n12: Double
+  ): p5Object = js.native
 
   def resetMatrix(): p5Object = js.native
 
@@ -390,24 +398,24 @@ object p5Global extends js.Any {
   def beginContour(): js.Dynamic = js.native
 
   def bezierVertex(
-                    x2: Double,
-                    y2: Double,
-                    x3: Double,
-                    y3: Double,
-                    x4: Double,
-                    y4: Double
-                  ): js.Dynamic = js.native
+      x2: Double,
+      y2: Double,
+      x3: Double,
+      y3: Double,
+      x4: Double,
+      y4: Double
+  ): js.Dynamic = js.native
 
   def curveVertex(x: Double, y: Double): js.Dynamic = js.native
 
   def endContour(): js.Dynamic = js.native
 
   def quadraticVertex(
-                       cx: Double,
-                       cy: Double,
-                       x3: Double,
-                       y3: Double
-                     ): js.Dynamic = js.native
+      cx: Double,
+      cy: Double,
+      x3: Double,
+      y3: Double
+  ): js.Dynamic = js.native
 
   def vertex(x: Double, y: Double): js.Dynamic = js.native
 
@@ -450,31 +458,31 @@ object p5Global extends js.Any {
   def createImage(width: Double, height: Double): Image = js.native
 
   def saveFrames(
-                  filename: String,
-                  extension: String,
-                  duration: Double,
-                  framerate: Double,
-                  callback: js.Function0[Any] = () => ()
-                ): Unit = js.native
+      filename: String,
+      extension: String,
+      duration: Double,
+      framerate: Double,
+      callback: js.Function0[Any] = () => ()
+  ): Unit = js.native
 
   def image(
-             img: Image,
-             sx: Double = 0.0,
-             sy: Double = 0.0,
-             sWidth: Double = 1.0,
-             sHeight: Double = 1.0,
-             dx: Double = 0.0,
-             dy: Double = 0.0,
-             dWidth: Double = 1.0,
-             dHeight: Double = 1.0
-           ): Unit = js.native
+      img: Image,
+      sx: Double = 0.0,
+      sy: Double = 0.0,
+      sWidth: Double = 1.0,
+      sHeight: Double = 1.0,
+      dx: Double = 0.0,
+      dy: Double = 0.0,
+      dWidth: Double = 1.0,
+      dHeight: Double = 1.0
+  ): Unit = js.native
 
   def tint(
-            v1: Double | js.Array[js.Any],
-            v2: Double | js.Array[js.Any] = ???,
-            v3: Double | js.Array[js.Any] = ???,
-            a: Double | js.Array[js.Any] = ???
-          ): Unit = js.native
+      v1: Double | js.Array[js.Any],
+      v2: Double | js.Array[js.Any] = ???,
+      v3: Double | js.Array[js.Any] = ???,
+      a: Double | js.Array[js.Any] = ???
+  ): Unit = js.native
 
   def noTint(): Unit = js.native
 
@@ -483,78 +491,79 @@ object p5Global extends js.Any {
   def filter(filterType: String, filterParam: Double): Unit = js.native
 
   def get(
-           x: Double = 0.0,
-           y: Double = 0.0,
-           w: Double = 1.0,
-           h: Double = 1.0
-         ): js.Array[js.Any] | Image = js.native
+      x: Double = 0.0,
+      y: Double = 0.0,
+      w: Double = 1.0,
+      h: Double = 1.0
+  ): js.Array[js.Any] | Image = js.native
 
   def loadPixels(): Unit = js.native
 
-  def set(x: Double, y: Double, c: Double | js.Array[js.Any] | js.Any): Unit = js.native
+  def set(x: Double, y: Double, c: Double | js.Array[js.Any] | js.Any): Unit =
+    js.native
 
   def loadFont(
-                path: String,
-                callback: js.Function0[Any] = () => ()
-              ): js.Dynamic = js.native
+      path: String,
+      callback: js.Function0[Any] = () => ()
+  ): js.Dynamic = js.native
 
   def loadJSON(
-                path: String,
-                callback: js.Function0[Any] = () => (),
-                errorCallback: js.Function0[Any] = () => (),
-                datatype: String = ""
-              ): js.Any | js.Array[js.Any] = js.native
+      path: String,
+      callback: js.Function0[Any] = () => (),
+      errorCallback: js.Function0[Any] = () => (),
+      datatype: String = ""
+  ): js.Any | js.Array[js.Any] = js.native
 
   def loadStrings(
-                   filename: String,
-                   callback: js.Function0[Any] = () => (),
-                   errorCallback: js.Function0[Any] = () => ()
-                 ): js.Array[js.Any] = js.native
+      filename: String,
+      callback: js.Function0[Any] = () => (),
+      errorCallback: js.Function0[Any] = () => ()
+  ): js.Array[js.Any] = js.native
 
   def loadXML(
-               filename: String,
-               callback: js.Function0[Any] = () => (),
-               errorCallback: js.Function0[Any] = () => ()
-             ): js.Dynamic = js.native
+      filename: String,
+      callback: js.Function0[Any] = () => (),
+      errorCallback: js.Function0[Any] = () => ()
+  ): js.Dynamic = js.native
 
   def httpGet(
-               path: String,
-               data: js.Any = "",
-               datatype: String = "",
-               callback: js.Function0[Any] = () => (),
-               errorCallback: js.Function0[Any] = () => ()
-             ): Unit = js.native
+      path: String,
+      data: js.Any = "",
+      datatype: String = "",
+      callback: js.Function0[Any] = () => (),
+      errorCallback: js.Function0[Any] = () => ()
+  ): Unit = js.native
 
   def httpPost(
-                path: String,
-                data: js.Any = "",
-                datatype: String = "",
-                callback: js.Function0[Any] = () => (),
-                errorCallback: js.Function0[Any] = () => ()
-              ): Unit = js.native
+      path: String,
+      data: js.Any = "",
+      datatype: String = "",
+      callback: js.Function0[Any] = () => (),
+      errorCallback: js.Function0[Any] = () => ()
+  ): Unit = js.native
 
   def httpDo(
-              path: String,
-              method: String = "",
-              data: js.Any = "",
-              datatype: String = "",
-              callback: js.Function0[Any] = () => (),
-              errorCallback: js.Function0[Any] = () => ()
-            ): Unit = js.native
+      path: String,
+      method: String = "",
+      data: js.Any = "",
+      datatype: String = "",
+      callback: js.Function0[Any] = () => (),
+      errorCallback: js.Function0[Any] = () => ()
+  ): Unit = js.native
 
   def saveJSON(
-                json: js.Array[js.Any] | js.Any,
-                filename: String,
-                optimize: Boolean = false
-              ): Unit = js.native
+      json: js.Array[js.Any] | js.Any,
+      filename: String,
+      optimize: Boolean = false
+  ): Unit = js.native
 
   def saveStrings(list: js.Array[js.Any], filename: String): Unit = js.native
 
   def saveTable(
-                 table: Table,
-                 filename: String,
-                 options: String = ""
-               ): Unit = js.native
+      table: Table,
+      filename: String,
+      options: String = ""
+  ): Unit = js.native
 
   def abs(n: Double): Double = js.native
 
@@ -573,12 +582,12 @@ object p5Global extends js.Any {
   def mag(a: Double, b: Double): Double = js.native
 
   def map(
-           value: Double,
-           start1: Double,
-           stop1: Double,
-           start2: Double,
-           stop: Double
-         ): Double = js.native
+      value: Double,
+      start1: Double,
+      stop1: Double,
+      start2: Double,
+      stop: Double
+  ): Double = js.native
 
   def max(n0: Double | js.Array[js.Any]): Double = js.native
 
@@ -594,7 +603,8 @@ object p5Global extends js.Any {
 
   def sqrt(n: Double): Double = js.native
 
-  def createVector(x: Double = 0.0, y: Double = 0.0, z: Double = 0.0): Unit = js.native
+  def createVector(x: Double = 0.0, y: Double = 0.0, z: Double = 0.0): Unit =
+    js.native
 
   def noise(x: Double, y: Double, z: Double): Double = js.native
 
@@ -604,7 +614,7 @@ object p5Global extends js.Any {
 
   def randomSeed(seed: Double): Unit = js.native
 
-  def random(min: Double, max: Double=Double.MaxValue): Double = js.native
+  def random(min: Double, max: Double = Double.MaxValue): Double = js.native
 
   def randomGaussian(mean: Double, sd: Double): Double = js.native
 
@@ -633,37 +643,39 @@ object p5Global extends js.Any {
   def textWidth(theText: String): Double = js.native
 
   def text(
-            str: String,
-            x: Double,
-            y: Double,
-            x2: Double,
-            y2: Double
-          ): js.Dynamic = js.native
+      str: String,
+      x: Double,
+      y: Double,
+      x2: Double,
+      y2: Double
+  ): js.Dynamic = js.native
 
   def textFont(f: js.Any | String): js.Dynamic = js.native
 
   def append(array: js.Array[js.Any], value: js.Any): Unit = js.native
 
-  def concat(a: js.Array[js.Any], b: js.Array[js.Any]): js.Array[js.Any] = js.native
+  def concat(a: js.Array[js.Any], b: js.Array[js.Any]): js.Array[js.Any] =
+    js.native
 
   def reverse(list: js.Array[js.Any]): Unit = js.native
 
   def shorten(list: js.Array[js.Any]): js.Array[js.Any] = js.native
 
   def shuffle(
-               array: js.Array[js.Any],
-               bool: Boolean = false
-             ): js.Array[js.Any] = js.native
+      array: js.Array[js.Any],
+      bool: Boolean = false
+  ): js.Array[js.Any] = js.native
 
   def sort(list: js.Array[js.Any], count: Double = 1.0): Unit = js.native
 
-  def splice(list: js.Array[js.Any], value: js.Any, position: Double): Unit = js.native
+  def splice(list: js.Array[js.Any], value: js.Any, position: Double): Unit =
+    js.native
 
   def subset(
-              list: js.Array[js.Any],
-              start: Double,
-              count: Double = 1.0
-            ): js.Array[js.Any] = js.native
+      list: js.Array[js.Any],
+      start: Double,
+      count: Double = 1.0
+  ): js.Array[js.Any] = js.native
 
   def float(str: String): Double = js.native
 
@@ -671,7 +683,8 @@ object p5Global extends js.Any {
 
   def str(n: String | Boolean | Double | js.Array[js.Any]): String = js.native
 
-  def boolean(n: String | Boolean | Double | js.Array[js.Any]): Boolean = js.native
+  def boolean(n: String | Boolean | Double | js.Array[js.Any]): Boolean =
+    js.native
 
   def byte(n: String | Boolean | Double | js.Array[js.Any]): Double = js.native
 
@@ -690,33 +703,35 @@ object p5Global extends js.Any {
   def matchAll(str: String, regexp: String): js.Array[js.Any] = js.native
 
   def nf(
-          num: Double | js.Array[js.Any],
-          left: Double = 1.0,
-          right: Double = 1.0
-        ): String | js.Array[js.Any] = js.native
+      num: Double | js.Array[js.Any],
+      left: Double = 1.0,
+      right: Double = 1.0
+  ): String | js.Array[js.Any] = js.native
 
   def nfc(
-           num: Double | js.Array[js.Any],
-           right: Double = 1.0
-         ): String | js.Array[js.Any] = js.native
+      num: Double | js.Array[js.Any],
+      right: Double = 1.0
+  ): String | js.Array[js.Any] = js.native
 
   def nfp(
-           num: Double | js.Array[js.Any],
-           left: Double = 1.0,
-           right: Double = 1.0
-         ): String | js.Array[js.Any] = js.native
+      num: Double | js.Array[js.Any],
+      left: Double = 1.0,
+      right: Double = 1.0
+  ): String | js.Array[js.Any] = js.native
 
   def nfs(
-           num: Double | js.Array[js.Any],
-           left: Double = 1.0,
-           right: Double = 1.0
-         ): String | js.Array[js.Any] = js.native
+      num: Double | js.Array[js.Any],
+      left: Double = 1.0,
+      right: Double = 1.0
+  ): String | js.Array[js.Any] = js.native
 
   def split(value: String, delim: String): js.Array[js.Any] = js.native
 
-  def splitTokens(value: String, delim: String = ""): js.Array[js.Any] = js.native
+  def splitTokens(value: String, delim: String = ""): js.Array[js.Any] =
+    js.native
 
-  def trim(str: String | js.Array[js.Any] = ???): String | js.Array[js.Any] = js.native
+  def trim(str: String | js.Array[js.Any] = ???): String | js.Array[js.Any] =
+    js.native
 
   def day(): Double = js.native
 
@@ -732,7 +747,8 @@ object p5Global extends js.Any {
 
   def year(): Double = js.native
 
-  def selectAll(name: String, container: String = ""): js.Array[js.Any] = js.native
+  def selectAll(name: String, container: String = ""): js.Array[js.Any] =
+    js.native
 
   def removeElements(): Unit = js.native
 
@@ -741,10 +757,10 @@ object p5Global extends js.Any {
   def getMasterVolume(): Double = js.native
 
   def masterVolume(
-                    volume: Double | js.Any,
-                    rampTime: Double = 1.0,
-                    timeFromNow: Double = 1.0
-                  ): Unit = js.native
+      volume: Double | js.Any,
+      rampTime: Double = 1.0,
+      timeFromNow: Double = 1.0
+  ): Unit = js.native
 
   def sampleRate(): Double = js.native
 

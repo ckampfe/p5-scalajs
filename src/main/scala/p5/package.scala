@@ -6,8 +6,7 @@ import scala.scalajs.js.|
 
 @js.native
 @JSName("p5.Color")
-class Color extends js.Object {
-}
+class Color extends js.Object {}
 
 @js.native
 @JSName("p5.Element")
@@ -36,13 +35,11 @@ class Element protected () extends js.Object {
 
 @js.native
 @JSName("p5.Graphics")
-class Graphics extends Element {
-}
+class Graphics extends Element {}
 
 @js.native
 @JSName("p5.Renderer")
-class Renderer extends Element {
-}
+class Renderer extends Element {}
 
 @js.native
 @JSName("p5.Image")
@@ -51,7 +48,8 @@ class Image extends js.Object {
   var width: js.Any = js.native
   var height: js.Any = js.native
   def loadPixels(): Unit = js.native
-  def set(x: Double, y: Double, a: Double | js.Array[js.Any] | js.Any): Unit = js.native
+  def set(x: Double, y: Double, a: Double | js.Array[js.Any] | js.Any): Unit =
+    js.native
   def resize(width: Double, height: Double): Unit = js.native
   def mask(srcImage: Image): Unit = js.native
   def save(filename: String, extension: String): Unit = js.native
@@ -66,18 +64,23 @@ class Table protected () extends js.Object {
   def addRow(row: TableRow = new TableRow): Unit = js.native
   def removeRow(id: Double): Unit = js.native
   def getRows(): js.Array[js.Any] = js.native
-  def findRows(value: String, column: Double | String): js.Array[js.Any] = js.native
-  def matchRows(regexp: String, column: String | Double = 1.0): js.Array[js.Any] = js.native
+  def findRows(value: String, column: Double | String): js.Array[js.Any] =
+    js.native
+  def matchRows(regexp: String,
+                column: String | Double = 1.0): js.Array[js.Any] = js.native
   def getColumn(column: String | Double): js.Array[js.Any] = js.native
   def clearRows(): Unit = js.native
   def addColumn(title: String = ""): Unit = js.native
   def getRowCount(): Double = js.native
-  def removeTokens(chars: String, column: String | Double = 1.0): Unit = js.native
+  def removeTokens(chars: String, column: String | Double = 1.0): Unit =
+    js.native
   def trim(column: String | Double): Unit = js.native
   def removeColumn(column: String | Double): Unit = js.native
   def set(column: String | Double, value: String | Double): Unit = js.native
-  def setNum(row: Double, column: String | Double, value: Double): Unit = js.native
-  def setString(row: Double, column: String | Double, value: String): Unit = js.native
+  def setNum(row: Double, column: String | Double, value: Double): Unit =
+    js.native
+  def setString(row: Double, column: String | Double, value: String): Unit =
+    js.native
   def get(row: Double, column: String | Double): String | Double = js.native
   def getNum(row: Double, column: String | Double): Double = js.native
   def getString(row: Double, column: String | Double): String = js.native
@@ -105,15 +108,22 @@ class Vector protected () extends js.Object {
   var y: js.Any = js.native
   var z: js.Any = js.native
   // def toString(): String = js.native
-  def set(x: Double | Vector | js.Array[js.Any] = ???, y: Double = 0.0, z: Double = 0.0): Unit = js.native
+  def set(x: Double | Vector | js.Array[js.Any] = ???,
+          y: Double = 0.0,
+          z: Double = 0.0): Unit = js.native
   def copy(): Vector = js.native
-  def add(x: Double | Vector | js.Array[js.Any], y: Double = 0.0, z: Double = 0.0): Vector = js.native
-  def sub(x: Double | Vector | js.Array[js.Any], y: Double = 0.0, z: Double = 0.0): Vector = js.native
+  def add(x: Double | Vector | js.Array[js.Any],
+          y: Double = 0.0,
+          z: Double = 0.0): Vector = js.native
+  def sub(x: Double | Vector | js.Array[js.Any],
+          y: Double = 0.0,
+          z: Double = 0.0): Vector = js.native
   def mult(n: Double): Vector = js.native
   def div(n: Double): Vector = js.native
   def mag(): Double = js.native
   def magSq(): Double = js.native
-  def dot(x: Double | Vector, y: Double = 0.0, z: Double = 0.0): Double = js.native
+  def dot(x: Double | Vector, y: Double = 0.0, z: Double = 0.0): Double =
+    js.native
   def cross(v: Vector): Vector = js.native
   def dist(v: Vector): Double = js.native
   def normalize(): Vector = js.native
@@ -122,7 +132,9 @@ class Vector protected () extends js.Object {
   def heading(): Double = js.native
   def rotate(angle: Double): Vector = js.native
   def array(): js.Array[js.Any] = js.native
-  def equals(x: Double | Vector | js.Array[js.Any] = ???, y: Double = 0.0, z: Double = 0.0): Boolean = js.native
+  def equals(x: Double | Vector | js.Array[js.Any] = ???,
+             y: Double = 0.0,
+             z: Double = 0.0): Boolean = js.native
 }
 
 @js.native
@@ -139,7 +151,11 @@ object Vector extends js.Object {
 class Font protected () extends js.Object {
   def this(pInst: js.Any = "") = this()
   var font: js.Any = js.native
-  def textBounds(line: String, x: Double, y: Double, fontSize: Double, options: js.Any): js.Dynamic = js.native
+  def textBounds(line: String,
+                 x: Double,
+                 y: Double,
+                 fontSize: Double,
+                 options: js.Any): js.Dynamic = js.native
 }
 
 @js.native
@@ -152,7 +168,9 @@ class MediaElement protected () extends js.Object {
   def disconnect(): Unit = js.native
   def showControls(): Unit = js.native
   def hideControls(): Unit = js.native
-  def addCue(time: Double, callback: js.Function0[Any], value: js.Any = ""): Double = js.native
+  def addCue(time: Double,
+             callback: js.Function0[Any],
+             value: js.Any = ""): Double = js.native
   def removeCue(id: Double): Unit = js.native
   def clearCues(): Unit = js.native
 }
@@ -173,25 +191,27 @@ class File extends js.Object {
 class SoundFile extends js.Object {
   def isLoaded(): Boolean = js.native
   def play(
-    startTime: Double = 1.0,
-    rate: Double = 1.0,
-    amp: Double = 1.0,
-    cueStart: Double = 1.0,
-    duration: Double = 1.0
+      startTime: Double = 1.0,
+      rate: Double = 1.0,
+      amp: Double = 1.0,
+      cueStart: Double = 1.0,
+      duration: Double = 1.0
   ): Unit = js.native
   def playMode(str: String): Unit = js.native
   def pause(startTime: Double = 1.0): Unit = js.native
   def loop(
-    startTime: Double = 1.0,
-    rate: Double = 1.0,
-    amp: Double = 1.0,
-    cueLoopStart: Double = 1.0,
-    duration: Double = 1.0
+      startTime: Double = 1.0,
+      rate: Double = 1.0,
+      amp: Double = 1.0,
+      cueLoopStart: Double = 1.0,
+      duration: Double = 1.0
   ): Unit = js.native
   def isPlaying(): Boolean = js.native
   def isPaused(): Boolean = js.native
   def stop(startTime: Double = 1.0): Unit = js.native
-  def setVolume(volume: Double | js.Any, rampTime: Double = 1.0, timeFromNow: Double = 1.0): Unit = js.native
+  def setVolume(volume: Double | js.Any,
+                rampTime: Double = 1.0,
+                timeFromNow: Double = 1.0): Unit = js.native
   def rate(playbackRate: Double = 1.0): Unit = js.native
   def duration(): Double = js.native
   def currentTime(): Double = js.native
@@ -205,12 +225,14 @@ class SoundFile extends js.Object {
   def disconnect(): Unit = js.native
   def setPath(path: String, callback: js.Function0[Any]): Unit = js.native
   def processPeaks(
-    callback: js.Function0[Any],
-    initThreshold: Double = 1.0,
-    minThreshold: Double = 1.0,
-    minPeaks: Double = 1.0
+      callback: js.Function0[Any],
+      initThreshold: Double = 1.0,
+      minThreshold: Double = 1.0,
+      minPeaks: Double = 1.0
   ): js.Array[js.Any] = js.native
-  def addCue(time: Double, callback: js.Function0[Any], value: js.Any = ""): Double = js.native
+  def addCue(time: Double,
+             callback: js.Function0[Any],
+             value: js.Any = ""): Double = js.native
   def removeCue(id: Double): Unit = js.native
   def clearCues(): Unit = js.native
 }
@@ -229,17 +251,19 @@ class Amplitude protected () extends js.Object {
 class FFT protected () extends js.Object {
   def this(smoothing: Double = 1.0, bins: Double = 1.0) = this()
   def setInput(source: js.Any = ""): Unit = js.native
-  def waveform(bins: Double = 1.0, precision: String = ""): js.Array[js.Any] = js.native
-  def analyze(bins: Double = 1.0, scale: Double = 1.0): js.Array[Double] = js.native
-  def getEnergy(frequency1: Double | String, frequency2: Double = 1.0): Double = js.native
+  def waveform(bins: Double = 1.0, precision: String = ""): js.Array[js.Any] =
+    js.native
+  def analyze(bins: Double = 1.0, scale: Double = 1.0): js.Array[Double] =
+    js.native
+  def getEnergy(frequency1: Double | String,
+                frequency2: Double = 1.0): Double = js.native
   def getCentroid(): Double = js.native
   def smooth(smoothing: Double): Unit = js.native
 }
 
 @js.native
 @JSName("p5.Signal")
-class Signal extends js.Object {
-}
+class Signal extends js.Object {}
 
 @js.native
 @JSName("p5.Oscillator")
@@ -254,7 +278,10 @@ class Oscillator protected () extends js.Object {
   def phase(phase: Double): Unit = js.native
   def add(number: Double): Oscillator = js.native
   def mult(number: Double): Oscillator = js.native
-  def scale(inMin: Double, inMax: Double, outMin: Double, outMax: Double): Oscillator = js.native
+  def scale(inMin: Double,
+            inMax: Double,
+            outMin: Double,
+            outMax: Double): Oscillator = js.native
 }
 
 @js.native
@@ -266,18 +293,34 @@ class Env extends js.Object {
   var decayLevel: js.Any = js.native
   var releaseTime: js.Any = js.native
   var releaseLevel: js.Any = js.native
-  def set(attackTime: Double, attackLevel: Double, decayTime: Double, decayLevel: Double, releaseTime: Double, releaseLevel: Double): Unit = js.native
-  def setADSR(attackTime: Double, decayTime: Double = 1.0, susRatio: Double = 1.0, releaseTime: Double = 1.0): Unit = js.native
+  def set(attackTime: Double,
+          attackLevel: Double,
+          decayTime: Double,
+          decayLevel: Double,
+          releaseTime: Double,
+          releaseLevel: Double): Unit = js.native
+  def setADSR(attackTime: Double,
+              decayTime: Double = 1.0,
+              susRatio: Double = 1.0,
+              releaseTime: Double = 1.0): Unit = js.native
   def setRange(aLevel: Double, rLevel: Double): Unit = js.native
   def setInput(unit: js.Any): Unit = js.native
   def setExp(isExp: Boolean): Unit = js.native
-  def play(unit: js.Any, startTime: Double = 1.0, sustainTime: Double = 1.0): Unit = js.native
+  def play(unit: js.Any,
+           startTime: Double = 1.0,
+           sustainTime: Double = 1.0): Unit = js.native
   def triggerAttack(unit: js.Any, secondsFromNow: Double): Unit = js.native
   def triggerRelease(unit: js.Any, secondsFromNow: Double): Unit = js.native
-  def ramp(unit: js.Any, secondsFromNow: Double, v: Double, v2: Double = 1.0): Unit = js.native
+  def ramp(unit: js.Any,
+           secondsFromNow: Double,
+           v: Double,
+           v2: Double = 1.0): Unit = js.native
   def add(number: Double): Env = js.native
   def mult(number: Double): Env = js.native
-  def scale(inMin: Double, inMax: Double, outMin: Double, outMax: Double): Env = js.native
+  def scale(inMin: Double,
+            inMax: Double,
+            outMin: Double,
+            outMax: Double): Env = js.native
 }
 
 @js.native
@@ -303,7 +346,8 @@ class Noise protected () extends js.Object {
 @JSName("p5.AudioIn")
 class AudioIn extends js.Object {
   var enabled: js.Any = js.native
-  def start(successCallback: js.Function0[Any]=()=>(), errorCallback: js.Function0[Any]=() =>()): Unit = js.native
+  def start(successCallback: js.Function0[Any] = () => (),
+            errorCallback: js.Function0[Any] = () => ()): Unit = js.native
   def stop(): Unit = js.native
   def connect(unit: js.Any = ""): Unit = js.native
   def disconnect(): Unit = js.native
@@ -317,11 +361,14 @@ class AudioIn extends js.Object {
 @JSName("p5.Filter")
 class Filter extends js.Object {
   var biquadFilter: js.Any = js.native
-  def set(freq: Double, res: Double, timeFromNow: Double = 1.0): Unit = js.native
+  def set(freq: Double, res: Double, timeFromNow: Double = 1.0): Unit =
+    js.native
   def freq(freq: Double, timeFromNow: Double = 1.0): Double = js.native
   def res(res: Double, timeFromNow: Double = 1.0): Double = js.native
   def setType(UNKNOWN: String): Unit = js.native
-  def amp(volume: Double, rampTime: Double = 1.0, timeFromNow: Double = 1.0): Unit = js.native
+  def amp(volume: Double,
+          rampTime: Double = 1.0,
+          timeFromNow: Double = 1.0): Unit = js.native
   def connect(unit: js.Any): Unit = js.native
   def disconnect(): Unit = js.native
 }
@@ -331,12 +378,18 @@ class Filter extends js.Object {
 class Delay extends js.Object {
   var leftDelay: js.Any = js.native
   var rightDelay: js.Any = js.native
-  def process(Signal: js.Any, delayTime: Double = 1.0, feedback: Double = 1.0, lowPass: Double = 1.0): Unit = js.native
+  def process(Signal: js.Any,
+              delayTime: Double = 1.0,
+              feedback: Double = 1.0,
+              lowPass: Double = 1.0): Unit = js.native
   def delayTime(delayTime: Double): Unit = js.native
   def feedback(feedback: Double | js.Any): Unit = js.native
-  def filter(cutoffFreq: Double | js.Any, res: Double | js.Any): Unit = js.native
+  def filter(cutoffFreq: Double | js.Any, res: Double | js.Any): Unit =
+    js.native
   def setType(`type`: String | Double): Unit = js.native
-  def amp(volume: Double, rampTime: Double = 1.0, timeFromNow: Double = 1.0): Unit = js.native
+  def amp(volume: Double,
+          rampTime: Double = 1.0,
+          timeFromNow: Double = 1.0): Unit = js.native
   def connect(unit: js.Any): Unit = js.native
   def disconnect(): Unit = js.native
 }
@@ -344,9 +397,16 @@ class Delay extends js.Object {
 @js.native
 @JSName("p5.Reverb")
 class Reverb extends js.Object {
-  def process(src: js.Any, seconds: Double = 1.0, decayRate: Double = 1.0, reverse: Boolean = false): Unit = js.native
-  def set(seconds: Double = 1.0, decayRate: Double = 1.0, reverse: Boolean = false): Unit = js.native
-  def amp(volume: Double, rampTime: Double = 1.0, timeFromNow: Double = 1.0): Unit = js.native
+  def process(src: js.Any,
+              seconds: Double = 1.0,
+              decayRate: Double = 1.0,
+              reverse: Boolean = false): Unit = js.native
+  def set(seconds: Double = 1.0,
+          decayRate: Double = 1.0,
+          reverse: Boolean = false): Unit = js.native
+  def amp(volume: Double,
+          rampTime: Double = 1.0,
+          timeFromNow: Double = 1.0): Unit = js.native
   def connect(unit: js.Any): Unit = js.native
   def disconnect(): Unit = js.native
 }
@@ -354,20 +414,31 @@ class Reverb extends js.Object {
 @js.native
 @JSName("p5.Convolver")
 class Convolver protected () extends js.Object {
-  def this(path: String, callback: js.Function0[Any] = () => (), errorCallback: js.Function0[Any] = () => ()) = this()
+  def this(path: String,
+           callback: js.Function0[Any] = () => (),
+           errorCallback: js.Function0[Any] = () => ()) = this()
   var convolverNode: js.Any = js.native
-  def createConvolver(path: String, callback: js.Function0[Any] = () => (), errorCallback: js.Function0[Any] = () => ()): Convolver = js.native
+  def createConvolver(path: String,
+                      callback: js.Function0[Any] = () => (),
+                      errorCallback: js.Function0[Any] = () => ()): Convolver =
+    js.native
   def process(src: js.Any): Unit = js.native
   var impulses: js.Any = js.native
-  def addImpulse(path: String, callback: js.Function0[Any], errorCallback: js.Function0[Any]): Unit = js.native
-  def resetImpulse(path: String, callback: js.Function0[Any], errorCallback: js.Function0[Any]): Unit = js.native
+  def addImpulse(path: String,
+                 callback: js.Function0[Any],
+                 errorCallback: js.Function0[Any]): Unit = js.native
+  def resetImpulse(path: String,
+                   callback: js.Function0[Any],
+                   errorCallback: js.Function0[Any]): Unit = js.native
   def toggleImpulse(id: String | Double): Unit = js.native
 }
 
 @js.native
 @JSName("p5.Phrase")
 class Phrase protected () extends js.Object {
-  def this(name: String, callback: js.Function0[Any], sequence: js.Array[js.Any]) = this()
+  def this(name: String,
+           callback: js.Function0[Any],
+           sequence: js.Array[js.Any]) = this()
   var sequence: js.Any = js.native
 }
 
@@ -385,7 +456,8 @@ class Part protected () extends js.Object {
   def addPhrase(phrase: Phrase): Unit = js.native
   def removePhrase(phraseName: String): Unit = js.native
   def getPhrase(phraseName: String): Unit = js.native
-  def replaceSequence(phraseName: String, sequence: js.Array[js.Any]): Unit = js.native
+  def replaceSequence(phraseName: String, sequence: js.Array[js.Any]): Unit =
+    js.native
   def onStep(callback: js.Function0[Any]): Unit = js.native
 }
 
@@ -403,7 +475,9 @@ class Score extends js.Object {
 @JSName("p5.SoundRecorder")
 class SoundRecorder extends js.Object {
   def setInput(unit: js.Any = ""): Unit = js.native
-  def record(soundFile: SoundFile, duration: Double = 1.0, callback: js.Function0[Any] = () => ()): Unit = js.native
+  def record(soundFile: SoundFile,
+             duration: Double = 1.0,
+             callback: js.Function0[Any] = () => ()): Unit = js.native
   def stop(): Unit = js.native
   def saveSound(soundFile: SoundFile, name: String): Unit = js.native
 }
@@ -411,7 +485,10 @@ class SoundRecorder extends js.Object {
 @js.native
 @JSName("p5.PeakDetect")
 class PeakDetect protected () extends js.Object {
-  def this(freq1: Double = 1.0, freq2: Double = 1.0, threshold: Double = 1.0, framesPerPeak: Double = 1.0) = this()
+  def this(freq1: Double = 1.0,
+           freq2: Double = 1.0,
+           threshold: Double = 1.0,
+           framesPerPeak: Double = 1.0) = this()
   def update(fftObject: FFT): Unit = js.native
   def onPeak(callback: js.Function0[Any], `val`: js.Any = ""): Unit = js.native
 }
@@ -422,5 +499,7 @@ class Gain extends js.Object {
   def setInput(src: js.Any): Unit = js.native
   def connect(unit: js.Any): Unit = js.native
   def disconnect(): Unit = js.native
-  def amp(volume: Double, rampTime: Double = 1.0, timeFromNow: Double = 1.0): Unit = js.native
+  def amp(volume: Double,
+          rampTime: Double = 1.0,
+          timeFromNow: Double = 1.0): Unit = js.native
 }

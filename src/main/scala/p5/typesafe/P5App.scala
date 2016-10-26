@@ -7,16 +7,11 @@ import scala.scalajs.js.JSApp
 /**
   * Created by fred on 23/10/2016.
   */
-
-
 trait State
-
 
 trait P5App[E] extends JSApp {
 
-
   private var local_state: E = initState
-
 
   def main(): Unit = {
 
@@ -30,7 +25,6 @@ trait P5App[E] extends JSApp {
     }
 
   }
-
 
   def initState: E
 

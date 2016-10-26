@@ -4,8 +4,7 @@ import p5.p5Global._
 
 import scala.scalajs.js.JSApp
 
-object Demo extends JSApp  {
-
+object Demo extends JSApp {
 
   def main(): Unit = {
 
@@ -19,7 +18,7 @@ object Demo extends JSApp  {
     // if the mouse is pressed,
     // draw a white circle at the x,y coordinates of the mouse
     draw = () => {
-      if(mouseIsPressed) {
+      if (mouseIsPressed) {
         println(mouseX)
         println(mouseY)
         ellipse(mouseX, mouseY, 20, 20)
@@ -31,4 +30,3 @@ object Demo extends JSApp  {
     ()
   }
 }
-

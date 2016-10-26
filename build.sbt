@@ -8,11 +8,10 @@ libraryDependencies ++= Seq()
 
 enablePlugins(ScalaJSPlugin)
 
-scalaJSUseRhino in Global := false
-
 scalacOptions ++= Seq(
   "-deprecation",
-  "-encoding", "UTF-8", // yes, this is 2 args
+  "-encoding",
+  "UTF-8", // yes, this is 2 args
   "-feature",
   "-language:existentials",
   "-language:higherKinds",
