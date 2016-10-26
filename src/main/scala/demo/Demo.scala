@@ -1,10 +1,11 @@
-package p5_scalajs.demo
+package demo
 
-import p5_scalajs.p5._
+import p5.p5Global._
 
 import scala.scalajs.js.JSApp
 
 object Demo extends JSApp {
+
   def main(): Unit = {
 
     // create a 400x400 black canvas
@@ -17,7 +18,7 @@ object Demo extends JSApp {
     // if the mouse is pressed,
     // draw a white circle at the x,y coordinates of the mouse
     draw = () => {
-      if(mouseIsPressed) {
+      if (mouseIsPressed) {
         println(mouseX)
         println(mouseY)
         ellipse(mouseX, mouseY, 20, 20)
@@ -29,4 +30,3 @@ object Demo extends JSApp {
     ()
   }
 }
-
